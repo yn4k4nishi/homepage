@@ -1,6 +1,8 @@
 import * as React from "react"
 import { Link } from "gatsby"
 
+import Logo from "./logo"
+
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
@@ -9,6 +11,7 @@ const Layout = ({ location, title, children }) => {
   if (isRootPath) {
     header = (
       <h1 className="main-heading">
+        <Logo></Logo>
         <Link to="/">{title}</Link>
       </h1>
     )
