@@ -15,29 +15,33 @@
 }
 
 .up {
+    transform-origin: 45% 50%;
     animation: up 15s linear infinite;
 }
 
 @keyframes up {
-    0%   { transform: translate(0, 0); }
-    20%  { transform: translate(0, -15px); }
-    40%  { transform: translate(5px, -15px); }
-    60%  { transform: translate(5px, -15px); }
-    80%  { transform: translate(0, 0); }
-    100% { transform: translate(0, 0); }
+    0%   { transform-origin: 50% 50%;transform: translate( 0 ,   0  ) rotateY(90deg); }
+    10%  { transform-origin: 50% 50%;transform: translate( 0 ,   0  ); }    
+    20%  { transform-origin: 50% 50%;transform: translate( 0 , -15px); }
+    40%  { transform-origin: 45% 50%;transform: translate(5px, -15px); }
+    60%  { transform-origin: 45% 50%;transform: translate(5px, -15px); }
+    80%  { transform-origin: 45% 50%;transform: translate(5px, -15px) rotateY(90deg); }
+    100% { transform-origin: 45% 50%;transform: translate(5px, -15px) rotateY(90deg); }
 }
 
 .down {
+    transform-origin: 55% 50%;
     animation: down 15s linear infinite;
 }
 
 @keyframes down {
-    0%   { transform: translate(0, 0); }
-    20%  { transform: translate(0, 15px); }
-    40%  { transform: translate(-5px, 15px); }
-    60%  { transform: translate(-5px, 15px); }
-    80%  { transform: translate(0, 0); }
-    100% { transform: translate(0, 0); }
+    0%   { transform-origin: 50% 50%; transform: translate(0, 0) rotateY(90deg); }
+    10%  { transform-origin: 50% 50%; transform: translate(0, 0); }
+    20%  { transform-origin: 50% 50%; transform: translate(0, 15px); }
+    40%  { transform-origin: 55% 50%; transform: translate(-5px, 15px); }
+    60%  { transform-origin: 55% 50%; transform: translate(-5px, 15px); }
+    80%  { transform-origin: 55% 50%; transform: translate(-5px, 15px) rotateY(90deg); }
+    100% { transform-origin: 55% 50%; transform: translate(-5px, 15px) rotateY(90deg); }
 }
 
 .extend {
@@ -50,8 +54,8 @@
     20%  { transform: scaleY(2); }
     40%  { transform: scaleY(2); }
     60%  { transform: scaleY(2); }
-    80%  { transform: scaleY(1); }
-    100% { transform: scaleY(1); }
+    80%  { transform: scaleY(2) rotateY(90deg); }
+    100% { transform: scaleY(2) rotateY(90deg); }
 }
 
 .extend2 {
@@ -64,6 +68,6 @@
     20%  { transform: scaleX(0); }
     40%  { transform: scaleX(1); }
     60%  { transform: scaleX(1); }
-    80%  { transform: scaleX(0); }
-    100% { transform: scaleX(0); }
+    80%  { transform: scaleX(1) rotateY(90deg); }
+    100% { transform: scaleX(1) rotateY(90deg); }
 }
