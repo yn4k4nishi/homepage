@@ -12,7 +12,7 @@ module.exports = {
       twitter: `KIT_panjandrum`,
     },
   },
-  pathPrefix: `/homepage/`,
+  pathPrefix: `/homepage`,
   plugins: [
     `gatsby-plugin-image`,
     {
