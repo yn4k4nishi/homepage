@@ -117,13 +117,13 @@ module.exports = {
       options: {
         name: `Gatsby Starter Blog`,
         short_name: `GatsbyJS`,
-        start_url: `/homepage/`,
+        start_url: `/homepage`,
         background_color: `#ffffff`,
         // This will impact how browsers show your PWA/website
         // https://css-tricks.com/meta-theme-color-and-trickery/
         // theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/logo.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-react-helmet`,
