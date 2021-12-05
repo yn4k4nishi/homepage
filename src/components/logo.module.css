@@ -35,9 +35,9 @@
 }
 
 @keyframes down {
-    0%   { transform-origin: 50% 50%; transform: translate(0, 0) rotateY(90deg); }
-    10%  { transform-origin: 50% 50%; transform: translate(0, 0); }
-    20%  { transform-origin: 50% 50%; transform: translate(0, 15px); }
+    0%   { transform-origin: 50% 50%; transform: translate( 0  ,  0  ) rotateY(90deg); }
+    10%  { transform-origin: 50% 50%; transform: translate( 0  ,  0  ); }
+    20%  { transform-origin: 50% 50%; transform: translate( 0  , 15px); }
     40%  { transform-origin: 55% 50%; transform: translate(-5px, 15px); }
     60%  { transform-origin: 55% 50%; transform: translate(-5px, 15px); }
     80%  { transform-origin: 55% 50%; transform: translate(-5px, 15px) rotateY(90deg); }
