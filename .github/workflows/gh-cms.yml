@@ -25,6 +25,8 @@ jobs:
            ---
 
            $POST_BODY
+
+           author : $POST_AUTHOR
            EOF
       - name: Publish content
         uses: stefanzweifel/git-auto-commit-action@v4
