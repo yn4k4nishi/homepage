@@ -3,6 +3,9 @@ name: gh-cms
 on:
   issues:
     types: [opened, edited]
+  push:
+    branches:
+      - main
 
 jobs:
   job1:
