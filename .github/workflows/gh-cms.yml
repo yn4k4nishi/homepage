@@ -14,12 +14,14 @@ jobs:
           POST_TITLE: ${{ github.event.issue.title }}
           POST_BODY: ${{ github.event.issue.body }}
           POST_ID: ${{ github.event.issue.id }}
+          POST_AUTHOR: ${{ github.event.issue.user.login }}
         run: |
            cd content/blog
            cat > $POST_ID.md << EOF
            ---
            title: $POST_TITLE
            date: ${{ github.event.issue.updated_at }}
+           author: $POST_AUTHOR
            ---
 
            $POST_BODY
