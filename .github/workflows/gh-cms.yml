@@ -8,6 +8,33 @@ jobs:
   job1:
     runs-on: ubuntu-20.04
     steps:
+      - uses: actions/checkout@v2
       - name: Create content
+        env:
+          POST_TITLE: ${{ github.event.issue.title }}
+          POST_BODY: ${{ github.event.issue.body }}
+          POST_ID: ${{ github.event.issue.id }}
         run: |
-          echo ${{ github.event.issue}}
+           cd content/blog
+           cat > $POST_ID.md << EOF
+           ---
+           title: $POST_TITLE
+           date: ${{ github.event.issue.updated_at }}
+           ---
+
+           $POST_BODY
+           EOF
+      - name: Publish content
+        uses: stefanzweifel/git-auto-commit-action@v4
+        id: auto-commit-action
+        with:
+          commit_message: 'New content: ${{ github.event.issue.title }}'
+          commit_options: '--allow-empty'
+          repository: .
+          status_options: '--untracked-files=no'
+          file_pattern: 'content/**/*'
+          push_options: '--force'
+          skip_dirty_check: true
+          skip_fetch: true
+          disable_globbing: true
+
